@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="fname" type="id" />
+    <item name="lname" type="id" />
+    <item name="uname" type="id" />
+    <item name="pword" type="id" />
+    <item name="register" type="id" />
+    <item name="register_error" type="id" />
+    <item name="bktologin" type="id" />
+</resources>

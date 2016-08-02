@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.sporteam.sporteam.MainActivity"
+    android:background="#c5e7fb">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/emailLogin"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Email" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/passLogin"
+        android:layout_below="@+id/emailLogin"
+        android:layout_alignLeft="@+id/emailLogin"
+        android:layout_alignStart="@+id/emailLogin"
+        android:text="Password"
+        android:inputType="textVisiblePassword"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/loginButt"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/emailLogin"
+        android:layout_alignStart="@+id/emailLogin"
+        android:layout_alignRight="@+id/emailLogin"
+        android:layout_alignEnd="@+id/emailLogin"
+        android:backgroundTint="#3e14bb"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/registerButt"
+        android:layout_below="@+id/loginButt"
+        android:layout_alignLeft="@+id/loginButt"
+        android:layout_alignStart="@+id/loginButt"
+        android:layout_alignRight="@+id/loginButt"
+        android:layout_alignEnd="@+id/loginButt"
+        android:backgroundTint="#3e14bb"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark" />
+
+</RelativeLayout>

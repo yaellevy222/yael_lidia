@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.sporteam.sporteam.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#c5e7fb">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_group"
+        android:id="@+id/addGroupButt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/personalButt"
+        android:layout_toLeftOf="@+id/personalButt"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:clickable="true"
+        android:backgroundTint="#3e14bb" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help"
+        android:id="@+id/helpButt"
+        android:layout_alignTop="@+id/addGroupButt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/filterButt"
+        android:layout_alignStart="@+id/filterButt"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:clickable="true"
+        android:backgroundTint="#3e14bb" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/personal"
+        android:id="@+id/personalButt"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:allowUndo="false"
+        android:textColorLink="@color/white"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:clickable="true"
+        android:backgroundTint="#3e14bb" />
+
+    <SearchView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchV"
+        android:layout_below="@+id/addGroupButt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listV"
+        android:layout_below="@+id/searchV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/sortButt"
+        android:layout_toEndOf="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sort"
+        android:id="@+id/sortButt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/personalButt"
+        android:layout_toStartOf="@+id/personalButt"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:clickable="true"
+        android:backgroundTint="#3e14bb" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter"
+        android:id="@+id/filterButt"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/searchV"
+        android:layout_alignEnd="@+id/searchV"
+        android:layout_toRightOf="@+id/personalButt"
+        android:layout_toEndOf="@+id/personalButt"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:singleLine="true"
+        android:clickable="true"
+        android:backgroundTint="#3e14bb" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView2"
+        android:layout_below="@+id/searchV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@mipmap/basketball1" />
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/imageView3"
+        android:src="@mipmap/football"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/listV"
+        android:layout_toStartOf="@+id/listV" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView4"
+        android:layout_below="@+id/imageView3"
+        android:layout_toLeftOf="@+id/listV"
+        android:layout_toStartOf="@+id/listV"
+        android:src="@mipmap/run" />
+
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:id="@+id/imageView5"
+        android:src="@mipmap/baseball"
+        android:layout_below="@+id/imageView4"
+        android:layout_toLeftOf="@+id/listV"
+        android:layout_toStartOf="@+id/listV" />
+
+</RelativeLayout>
