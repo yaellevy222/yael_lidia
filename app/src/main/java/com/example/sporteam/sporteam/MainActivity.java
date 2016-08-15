@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         host = "http://sporteam-2016.rapidapi.io/find_teams";
         new PostTask().execute("");
         ArrayList<String> values = new ArrayList<String>();
+        ArrayList<GroupDetailsPOJO> pojos = new ArrayList<GroupDetailsPOJO>();
         ArrayList<String> images= new ArrayList<String>();
-       // ViewHolder holder = new ViewHolder();
 
         try {
             Thread.sleep(2000);
@@ -77,19 +77,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         for(int i=0; i<groupDetailsPOJO.length; ++i)
         {
-            String groupName = groupDetailsPOJO[i].getName();
+           /* String groupName = groupDetailsPOJO[i].getName();
             String groupType = groupDetailsPOJO[i].getType();
             values.add(groupName);
-            images.add(groupType);
+            images.add(groupType);*/
+            pojos.add(i, groupDetailsPOJO[i]);
         }
 
-        /*holder.image.setImageResource(
+       /* holder.image.setImageResource(
                 res.getIdentifier(
                         "com.androidexample.customlistview:drawable/"+groupType.getImage()
-                        ,null,null));
-*/
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, values );
+                        ,null,null));*/
+
+        GroupListAdapter adapter = new GroupListAdapter(this, pojos);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -118,13 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
     private GroupDetailsPOJO[] createJsonObj() {
-       Gson gson = new Gson();
-       /* Reader reader = null;
-        JsonParser parser = new JsonParser();
-        JsonObject jsonObj = parser.parse(contentAsString).getAsJsonObject();
-        JsonArray jsonArr = jsonObj.getAsJsonArray("key");
-        groupDetailsPOJO = gson.fromJson(jsonArr.toString(), ArrayList.class);*/
-
+        Gson gson = new Gson();
         GroupDetailsPOJO[] groupDetailsPOJO = gson.fromJson(contentAsString, GroupDetailsPOJO[].class);
         return groupDetailsPOJO;
     }
